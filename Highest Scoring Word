@@ -1,0 +1,14 @@
+def high(x):
+    
+    words = x.split()
+    
+    scores=[]
+    
+    for word in words:
+        total=0
+        for char in word:
+            total+=ord(char)-ord("a")+1
+        scores.append(total)
+    
+    return words[scores.index(max(scores))]
+            
