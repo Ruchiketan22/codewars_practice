@@ -1,0 +1,7 @@
+def find_missing_letter(chars):
+    for i in range (len(chars)-1):
+        current_letter = chars[i]
+        next_letter = chars[i+1]
+        if ord(next_letter) - ord(current_letter) > 1:
+            missing = chr(ord(current_letter) + 1)
+            return missing 
