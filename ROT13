@@ -1,0 +1,15 @@
+def rot13(sentence):
+     result = []
+     for char in sentence:
+         if "a"<= char <= "z":
+             result.append(chr((ord(char)-ord("a")+13)%26 +ord("a")))
+         elif "A"<= char <= "Z":
+             result.append(chr((ord(char)-ord("A")+13)%26 +ord("A")))
+         else:
+             result.append(char)
+    return "".join(result)
+OR
+    return "".join(chr((ord(char)-ord("a")+13)%26 +ord("a")) if "a"<= char <= "z" else
+                chr((ord(char)-ord("A")+13)%26 +ord("A")) if "A"<= char <= "Z" else
+                char
+               for char in sentence )
