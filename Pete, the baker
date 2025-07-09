@@ -1,0 +1,7 @@
+def cakes(recipe, available):
+    result = []
+    for ingredient,amount in recipe.items():
+        available_amount = available.get(ingredient, 0)
+        result.append(available_amount//amount)
+    output = min(result)
+    return output
