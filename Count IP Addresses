@@ -1,0 +1,8 @@
+def ips_between(start, end):
+
+    a, b, c, d = map(int, end.split('.'))
+    A, B, C, D = map(int, start.split('.'))
+        
+    ips = A * 256**3 + B * 256**2 + C * 256 + D
+    ipe = a * 256**3 + b * 256**2 + c * 256 + d
+    return ipe-ips
