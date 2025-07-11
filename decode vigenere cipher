@@ -1,0 +1,15 @@
+def decode_encode(key, alphabet):
+    result = []
+    p_index = []  # ← Initialize p_index list
+    a_index = [ord(char) - ord("a") for char in alphabet]
+    k_index = [ord(char) - ord("a") for char in key]
+
+    for i in range(len(a_index)):
+        # Repeat key using modulo if necessary
+        shift = k_index[i % len(k_index)]
+        p_index.append((a_index[i] - shift + 26) % 26)
+
+    for i in p_index:
+        result.append(chr(i + ord('a')))
+    
+    return "".join(result)
