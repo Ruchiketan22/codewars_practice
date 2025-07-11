@@ -1,6 +1,6 @@
 def decode_encode(key, alphabet):
     result = []
-    p_index = []  # ← Initialize p_index list
+    p_index = []  
     a_index = [ord(char) - ord("a") for char in alphabet]
     k_index = [ord(char) - ord("a") for char in key]
 
